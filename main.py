@@ -12,8 +12,6 @@ SARVAM_API_KEY = os.getenv("SARVAM_API_KEY")
 
 if not SARVAM_API_KEY:
     print("Warning: SARVAM_API_KEY not found in environment variables")
-else:
-    print(f"API key found: {SARVAM_API_KEY[:10]}...")
 
 # Language code mapping
 LANGUAGE_MAP = {
@@ -234,4 +232,4 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000, use_colors=False)
